@@ -2,6 +2,7 @@
     "name": "mamikon/role-manager",
     "description": "Laravel Role And Permission Manager",
     "type": "package",
+    "version":"0.0.1",
     "authors": [
         {
             "name": "Mamikon Arakelyan",
