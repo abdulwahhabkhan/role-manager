@@ -17,9 +17,6 @@
     "mamikon/role-manager": "*"
   },
   "autoload": {
-    "classmap": [
-      "database"
-    ],
     "psr-4": {
       "Mamikon\\RoleManager\\": "src/"
     }
