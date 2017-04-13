@@ -61,12 +61,7 @@ class RoleManagerProvider extends ServiceProvider
                 __DIR__ . '/config.php' => config_path('roleManager.php'),
             ]
         );
-        $this->publishes(
-            [
-                __DIR__ . '/translations'
-                => resource_path('lang/vendor/roleManager'),
-            ]
-        );
+
         $this->publishes(
             [
                 __DIR__ . '/views' => resource_path('views/vendor/RoleManager'),
