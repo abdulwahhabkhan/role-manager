@@ -3,8 +3,8 @@
   "description": "Laravel Role And Permission Manager",
   "keywords": ["permission", "laravel", "role"],
   "license": "MIT",
-  "type": "library",
-  "version": "1.0.2",
+  "type": "laravel-package",
+  "version": "1.0.3",
   "authors": [
     {
       "name": "Mamikon Arakelyan",
