@@ -1,16 +1,17 @@
 {
-    "name": "mamikon/role-manager",
-    "description": "Laravel Role And Permission Manager",
-    "type": "package",
-    "version":"0.0.1",
-    "authors": [
-        {
-            "name": "Mamikon Arakelyan",
-            "email": "m.araqelyan@gmail.com"
-        }
-    ],
-    "require": {},
-    "psr-4": {
-        "Mamikon\\RoleManager\\": "src/"
+  "name": "mamikon/role-manager",
+  "description": "Laravel Role And Permission Manager",
+  "license": "MIT",
+  "type": "package",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Mamikon Arakelyan",
+      "email": "m.araqelyan@gmail.com"
     }
+  ],
+  "require": {},
+  "psr-4": {
+    "Mamikon\\RoleManager\\": "src/"
+  }
 }
