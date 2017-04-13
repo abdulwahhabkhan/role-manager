@@ -1,0 +1,5 @@
+@include("RoleManager::forms._input", ['label'=> "Permission Name *", 'name'=>'name', 'placeholder'=>'Fill Permission Name', 'additional' => 'required'])
+@include("RoleManager::forms._input", ['label'=> "Permission Description *", 'name'=>'description', 'placeholder'=>'Fill Permission Short Description', 'additional' => 'required'])
+@include("RoleManager::forms._input", ['label'=> "Permission Additional Validation Class Name", 'name'=>'class', 'placeholder'=>'Fill Permission Additional Validation Class Name'])
+@include("RoleManager::forms._input", ['label'=> "Permission Additional Validation Action(method)", 'name'=>'method', 'placeholder'=>'Fill Permission Additional Validation Action(method)'])
+@include('RoleManager::forms._button', ['text'=>$text])

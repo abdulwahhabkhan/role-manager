@@ -1,0 +1,15 @@
+{
+    "name": "mamikon/role-manager",
+    "description": "Laravel Role And Permission Manager",
+    "type": "package",
+    "authors": [
+        {
+            "name": "Mamikon Arakelyan",
+            "email": "m.araqelyan@gmail.com"
+        }
+    ],
+    "require": {},
+    "psr-4": {
+        "Mamikon\\RoleManager\\": "src/"
+    }
+}
