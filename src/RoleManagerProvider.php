@@ -28,14 +28,15 @@ class RoleManagerProvider extends ServiceProvider
         $this->_extendedValidation();
         $this->_loadParts();
         $this->_publish();
+
+        $roleManager = new RoleManager();
+        $roleManager->defineAllPermissions();
+        $this->app->instance('Mamikon\RoleManager', $roleManager);
         if ($this->app->runningInConsole()) {
             $this->commands(
                 [RoleMangerCommand::class,]
             );
         }
-        $roleManager = new RoleManager();
-        $roleManager->defineAllPermissions();
-        $this->app->instance('Mamikon\RoleManager', $roleManager);
 
     }
 
@@ -46,7 +47,9 @@ class RoleManagerProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(
+            __DIR__ . '/config.php', 'roleManager.php'
+        );
     }
 
     /**
@@ -77,10 +80,6 @@ class RoleManagerProvider extends ServiceProvider
     private function _loadParts()
     {
         $this->loadRoutesFrom(__DIR__ . '/routes.php');
-
-        $this->mergeConfigFrom(
-            __DIR__ . '/config.php', 'roleManager.php'
-        );
         $this->loadMigrationsFrom(__DIR__ . '/migrations');
         $this->loadTranslationsFrom(__DIR__ . '/translations', 'RoleManager');
         $this->loadViewsFrom(__DIR__ . '/views', 'RoleManager');

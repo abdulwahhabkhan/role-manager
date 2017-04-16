@@ -91,8 +91,8 @@ class RoleMangerCommand extends Command
                 if ($permissionsList == '*') {
                     foreach ($permissions as $permissionName => $permission) {
                         $permissionModel = Permissions::
-                                        where('name', $permissionName)
-                                        ->first();
+                        where('name', $permissionName)
+                            ->first();
                         if ($permissionModel) {
                             $checker = $roleModel->permissions
                                 ->where('name', $permissionName)->first();
@@ -103,16 +103,16 @@ class RoleMangerCommand extends Command
                     }
 
                 } elseif (is_array($permissionsList)) {
-                    foreach ($permissions as $permissionName) {
+
+                    foreach ($permissionsList as $permissionName) {
 
                         $permissionModel = Permissions::
-                            where('name', $permissionName)->first();
+                        where('name', $permissionName)->first();
 
                         if ($permissionModel) {
 
                             $checker = $roleModel->
                             permissions->where('name', $permissionName)->first();
-
                             if (!$checker) {
                                 $roleModel->permissions()->attach($permissionModel);
                             }
